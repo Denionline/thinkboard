@@ -28,7 +28,6 @@ export async function createNote(req, res) {
 
 		const savedNote = await note.save();
 		res.status(201).json(savedNote);
-		console.log(title, content);
 	} catch (error) {
 		console.error("Error to create a new note", error);
 		res.status(500).json({message: "Internal server error"});
